@@ -162,8 +162,12 @@
     <div class="container">
       <div class="split">
         <div class="split__image fade-up">
-          <img src="images/nomad-lifestyle.png"
-            alt="Digital nomad working from Red Mountain balcony with Da Nang city view" loading="lazy">
+          <div class="slider-container" id="lifestyle-slider">
+            <img src="images/lifestyle1.jpg" class="slide active" alt="Red Mountain lifestyle 1" loading="lazy">
+            <img src="images/lifestyle2.jpg" class="slide" alt="Red Mountain lifestyle 2" loading="lazy">
+            <img src="images/lifestyle3.jpg" class="slide" alt="Red Mountain lifestyle 3" loading="lazy">
+            <img src="images/lifestyle4.jpg" class="slide" alt="Red Mountain lifestyle 4" loading="lazy">
+          </div>
         </div>
         <div class="split__content fade-up">
           <span class="eyebrow">Không chỉ là thư giãn — mà là hành trình phục hồi và chăm sóc từ bên trong</span>
@@ -880,6 +884,25 @@
 
       // Start
       startAuto();
+    })();
+  </script>
+
+  <!-- Lifestyle Image Slider Script -->
+  <script>
+    (function() {
+      function initSlider(id, interval) {
+        const slider = document.getElementById(id);
+        if (!slider) return;
+        const slides = slider.querySelectorAll('.slide');
+        if (slides.length <= 1) return;
+        let current = 0;
+        setInterval(function() {
+          slides[current].classList.remove('active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('active');
+        }, interval);
+      }
+      initSlider('lifestyle-slider', 3500);
     })();
   </script>
 
