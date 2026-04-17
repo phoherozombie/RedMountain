@@ -1014,7 +1014,17 @@ const TRANSLATIONS = {
     "hero.h1": "Your Home for the Season",
     "hero.sub": "A quiet wellness residence designed for 1–3 month stays. Fully furnished, completely personal — nothing like a hotel.",
     "cta.rates": "See Long-Stay Rates",
-    "cta.contact": "Contact Us Directly"
+    "cta.contact": "Contact Us Directly",
+    "rooms.r_f1": "Around 35m², optimal for 2 people (can accommodate up to 4 using a sofa bed)",
+    "rooms.r_f2": "2 spacious Twin beds for comfortable sleep",
+    "rooms.r_f3": "Pull-out sofa bed, suitable for 2 additional guests",
+    "rooms.r_f4": "Full kitchen: stove, fridge, basic utensils",
+    "rooms.r_f5": "Private desk with comfortable chair for remote work",
+    "rooms.r_f6": "Stable WiFi for work and entertainment",
+    "rooms.r_f7": "Airy windows with garden/courtyard views and natural light",
+    "rooms.r_f8": "Air conditioning keeps the space consistently cool",
+    "rooms.r_f9": "Private bathroom with full hot water",
+    "rooms.r_f10": "Private washing machine in-room, convenient for long stays",
   },
   "vi": {
     "index.28m781": "Được thiết kế để<br>Mở rộng cuộc sống",
@@ -2385,7 +2395,17 @@ const TRANSLATIONS = {
     "hero.h1": "이 계절의 당신의 집",
     "hero.sub": "1~3개월 장기 체류를 위한 조용한 웰니스 레지던스. 완전한 가구 구비, 프라이빗 — 호텔과는 다릅니다.",
     "cta.rates": "장기 숙박 요금 보기",
-    "cta.contact": "직접 문의하기"
+    "cta.contact": "직접 문의하기",
+    "rooms.r_f1": "약 35m², 2인에 최적 (소파베드 사용 시 최대 4인 투숙 가능)",
+    "rooms.r_f2": "넓고 편안한 트윈 침대 2개",
+    "rooms.r_f3": "2인 추가가 가능한 풀아웃 소파베드",
+    "rooms.r_f4": "완비된 주방: 난로, 냉장고, 기본 식기",
+    "rooms.r_f5": "원격 근무에 적합한 편안한 의자와 개인 책상",
+    "rooms.r_f6": "업무와 엔터테인먼트를 위한 안정적인 WiFi",
+    "rooms.r_f7": "정원/마당 전망과 자연 채광이 들어오는 통창",
+    "rooms.r_f8": "공간을 항상 시원하게 유지하는 에어컨",
+    "rooms.r_f9": "따뜻한 물이 잘 나오는 전용 욕실",
+    "rooms.r_f10": "장기 숙박에 편리한 객실 내 전용 세탁기",
   }
 };
 // --- TRANSLATIONS END ---
