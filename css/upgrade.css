@@ -976,6 +976,24 @@
 @media (max-width: 768px) {
   .scroll-cta-block {
     padding: 2rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .scroll-cta-block__actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .scroll-cta-block__actions .btn {
+    width: 100%;
+  }
+
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
   .option-tiles {
