@@ -228,9 +228,15 @@
 
 .scroll-cta-block__actions {
   display: flex;
-  gap: 0.8rem;
+  gap: clamp(0.5rem, 1vw + 1vh, 0.8rem);
   flex-shrink: 0;
   flex-wrap: wrap;
+}
+
+.scroll-cta-block__actions .btn {
+  font-size: clamp(0.75rem, 1.5vw + 0.5vh, 1rem);
+  padding: clamp(0.6rem, 1vh + 1vw, 1rem) clamp(1.2rem, 2vw + 1vh, 2rem);
+  white-space: nowrap;
 }
 
 /* ── Multi-Step Form ── */
