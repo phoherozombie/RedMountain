@@ -1596,3 +1596,27 @@ h3 {
     gap: 0.5rem;
   }
 }
+
+/* ── Landscape / Short Vertical Height Safeties ── */
+@media (max-height: 650px) {
+  .hero {
+    height: 100vh;
+    min-height: auto;
+    padding: 0 0 1rem 0;
+  }
+  .hero__content {
+    margin-top: 1rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.4rem, 6vh, 2.4rem) !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .hero__sub {
+    font-size: clamp(0.85rem, 3vh, 1.2rem);
+    margin-bottom: 1rem !important;
+  }
+  .availability-banner {
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem auto !important;
+  }
+}
