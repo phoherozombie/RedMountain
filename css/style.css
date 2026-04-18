@@ -1541,6 +1541,11 @@ h3 {
     margin-bottom: 1.5rem;
   }
 
+  .availability-banner {
+    padding: 0.6rem 1rem;
+    margin: 0.8rem auto !important;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
   }
@@ -1567,6 +1572,20 @@ h3 {
 
   .hero__sub {
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .availability-banner {
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem auto !important;
+  }
+  .availability-banner strong {
+    font-size: 0.85rem;
+  }
+  .availability-banner span {
+    font-size: 0.75rem;
+  }
+  .hero__ctas {
+    gap: 0.5rem;
   }
 }
