@@ -11,25 +11,30 @@ function initNav() {
     else nav.classList.remove('scrolled');
   }, { passive: true });
 
-  // Mobile hamburger
   const hamburger = document.querySelector('.nav__hamburger');
   const links = document.querySelector('.nav__links');
   if (hamburger && links) {
     hamburger.addEventListener('click', () => {
       links.classList.toggle('mobile-open');
       hamburger.classList.toggle('open');
+      
+      if (links.classList.contains('mobile-open')) {
+        document.body.classList.add('no-scroll');
+      } else {
+        document.body.classList.remove('no-scroll');
+      }
     });
-    // Close on link click
+
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         links.classList.remove('mobile-open');
         hamburger.classList.remove('open');
+        document.body.classList.remove('no-scroll');
       });
     });
   }
 }
 
-/* ── Scroll-triggered fade-up ── */
 function initFadeUps() {
   const elements = document.querySelectorAll('.fade-up');
   if (!elements.length) return;
