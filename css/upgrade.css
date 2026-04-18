@@ -981,12 +981,15 @@
   }
 
   .scroll-cta-block__actions {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    gap: 1rem;
   }
 
   .scroll-cta-block__actions .btn {
     width: 100%;
+    max-width: 300px;
   }
 
   .comparison-table {
