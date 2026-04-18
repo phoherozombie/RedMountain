@@ -440,7 +440,6 @@ h3 {
   z-index: 2;
   max-width: 820px;
   padding: 0 1.5rem;
-  margin-top: 12rem;
 }
 
 .hero__eyebrow {
@@ -1464,10 +1463,6 @@ h3 {
     padding: 0 0 2rem 0;
   }
 
-  .hero__content {
-    margin-top: 6rem;
-  }
-
   .nav__links {
     display: none;
   }
@@ -1537,10 +1532,6 @@ h3 {
     padding: 0 0 1.5rem 0;
   }
 
-  .hero__content {
-    margin-top: 4rem;
-  }
-
   .hero h1 {
     font-size: 1.8rem !important;
   }
@@ -1560,5 +1551,22 @@ h3 {
 
   .sticky-cta a span.label {
     display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero {
+    height: 55vh;
+    min-height: 380px;
+    padding: 0 0 1rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem !important;
+  }
+
+  .hero__sub {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
   }
 }
