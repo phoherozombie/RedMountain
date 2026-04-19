@@ -201,10 +201,113 @@ function initHeroSlider() {
   startInterval();
 }
 
+/* ── Lightbox (Image Zoom) ── */
+function initLightbox() {
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = `
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-arrow lightbox-arrow--prev" aria-label="Previous image">&lsaquo;</button>
+    <button class="lightbox-arrow lightbox-arrow--next" aria-label="Next image">&rsaquo;</button>
+    <img src="" alt="Zoomed view">
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('img');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+  const prevBtn = lightbox.querySelector('.lightbox-arrow--prev');
+  const nextBtn = lightbox.querySelector('.lightbox-arrow--next');
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  const showImage = (index) => {
+    if (!currentGallery.length) return;
+    if (index < 0) index = currentGallery.length - 1;
+    if (index >= currentGallery.length) index = 0;
+    
+    currentIndex = index;
+    const targetImg = currentGallery[currentIndex];
+    
+    // Smooth transition
+    lightboxImg.style.opacity = '0';
+    setTimeout(() => {
+      lightboxImg.src = targetImg.src;
+      lightboxImg.style.opacity = '1';
+    }, 150);
+
+    // Toggle arrows
+    const showArrows = currentGallery.length > 1;
+    prevBtn.style.display = showArrows ? 'flex' : 'none';
+    nextBtn.style.display = showArrows ? 'flex' : 'none';
+  };
+
+  // Open lightbox
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.room-card__image img, .split__image img, .slide, .hero__slide');
+    if (img && !e.target.closest('.hero__arrow') && !e.target.closest('.hero__dot') && !e.target.closest('.lightbox-arrow')) {
+      
+      // Determine gallery context (all images in the same section/container)
+      const container = img.closest('.slider-container, .rooms-grid, .hero__slideshow, .split');
+      if (container) {
+        currentGallery = Array.from(container.querySelectorAll('img')).filter(i => {
+          // Filter out small icons or decorative element images if any exist
+          return i.src && i.offsetParent !== null; 
+        });
+        currentIndex = currentGallery.indexOf(img);
+        if (currentIndex === -1) {
+           currentGallery = [img];
+           currentIndex = 0;
+        }
+      } else {
+        currentGallery = [img];
+        currentIndex = 0;
+      }
+
+      showImage(currentIndex);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  // Click outside to close
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === closeBtn) {
+      closeLightbox();
+    }
+  });
+
+  // Navigation clicks
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+  });
+}
+
 /* ── Init all ── */
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initHeroSlider();
+  initLightbox();
   initFadeUps();
   initFAQ();
   initLang();
