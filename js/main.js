@@ -125,9 +125,86 @@ function initContactForm() {
   });
 }
 
+/* ── Hero Slider ── */
+function initHeroSlider() {
+  const slider = document.getElementById('hero-slideshow');
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.hero__slide');
+  const dots = slider.querySelectorAll('.hero__dot');
+  const prevBtn = document.getElementById('hero-prev');
+  const nextBtn = document.getElementById('hero-next');
+  let currentSlide = 0;
+  let slideInterval;
+
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    if (slides[index]) slides[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    if (!slides.length) return;
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function prevSlide() {
+    if (!slides.length) return;
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextSlide();
+      resetInterval();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevSlide();
+      resetInterval();
+    });
+  }
+
+  // Click on slide/image to advance
+  slides.forEach(slide => {
+    slide.addEventListener('click', () => {
+      nextSlide();
+      resetInterval();
+    });
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showSlide(index);
+      resetInterval();
+    });
+  });
+
+  function startInterval() {
+    slideInterval = setInterval(nextSlide, 4000); // 4 seconds for a more dynamic feel
+  }
+
+  function resetInterval() {
+    clearInterval(slideInterval);
+    startInterval();
+  }
+
+  startInterval();
+}
+
 /* ── Init all ── */
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  initHeroSlider();
   initFadeUps();
   initFAQ();
   initLang();

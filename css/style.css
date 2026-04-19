@@ -432,6 +432,75 @@ h3 {
   object-position: center;
 }
 
+/* ── Hero Slider Components ── */
+.hero__slideshow .hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  cursor: pointer;
+}
+
+.hero__slideshow .hero__slide.active {
+  opacity: 1;
+}
+
+.hero__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.hero__arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero__arrow--prev { left: 2rem; }
+.hero__arrow--next { right: 2rem; }
+
+.hero__dots {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  z-index: 10;
+}
+
+.hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero__dot.active {
+  background: white;
+  transform: scale(1.4);
+}
+
+@media (max-width: 768px) {
+  .hero__arrow { display: none; }
+  .hero__dots { bottom: 4rem; }
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -440,6 +509,7 @@ h3 {
       rgba(30, 25, 20, 0.55) 60%,
       rgba(30, 25, 20, 0.75) 100%);
   z-index: 1;
+  pointer-events: none; /* Allows clicks to reach slider buttons below */
 }
 
 .hero__content {
@@ -611,6 +681,16 @@ h3 {
 
 .split__content .eyebrow {
   margin-bottom: 0.8rem;
+}
+
+.split__content h2 {
+  margin-bottom: 1.2rem;
+}
+
+.split__content .eyebrow {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  display: block;
 }
 
 .split__content h2 {
