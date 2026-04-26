@@ -192,20 +192,23 @@
           </div>
         </div>
         <div class="menu-cards">
-          <div class="menu-card">
+          <div class="menu-card" data-service="co-vai-gay" role="button" tabindex="0" aria-label="Xem chi tiết: Thư giãn cổ vai gáy">
             <div class="menu-card__icon">🧖</div>
             <div class="menu-card__name">Thư giãn cổ vai gáy</div>
             <div class="menu-card__time">30 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-service="mat-mat" role="button" tabindex="0" aria-label="Xem chi tiết: Thanh lọc mắt – giảm mỏi">
             <div class="menu-card__icon">👁️</div>
             <div class="menu-card__name">Thanh lọc mắt – giảm mỏi</div>
             <div class="menu-card__time">45 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-service="nao-bo-ngu-sau" role="button" tabindex="0" aria-label="Xem chi tiết: Dưỡng sinh não bộ – ngủ sâu">
             <div class="menu-card__icon">🧠</div>
             <div class="menu-card__name">Dưỡng sinh não bộ – ngủ sâu</div>
             <div class="menu-card__time">60 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
         </div>
       </div>
@@ -221,20 +224,23 @@
           <div class="menu-cat-badge">Được chọn nhiều nhất</div>
         </div>
         <div class="menu-cards menu-cards--featured">
-          <div class="menu-card">
+          <div class="menu-card" data-service="dau-dau-tien-dinh" role="button" tabindex="0" aria-label="Xem chi tiết: Cân bằng đau đầu – tiền đình – giấc ngủ">
             <div class="menu-card__icon">🌀</div>
             <div class="menu-card__name">Cân bằng đau đầu – tiền đình – giấc ngủ</div>
             <div class="menu-card__time">60 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-service="cot-song-co-lung" role="button" tabindex="0" aria-label="Xem chi tiết: Hỗ trợ cột sống cổ/lưng">
             <div class="menu-card__icon">🦴</div>
             <div class="menu-card__name">Hỗ trợ cột sống cổ/lưng – giải phóng chèn ép</div>
             <div class="menu-card__time">90 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-service="than-kinh-toa" role="button" tabindex="0" aria-label="Xem chi tiết: Hỗ trợ thần kinh tọa">
             <div class="menu-card__icon">⚡</div>
             <div class="menu-card__name">Hỗ trợ thần kinh tọa – giảm tê đau</div>
             <div class="menu-card__time">90 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
         </div>
       </div>
@@ -249,20 +255,23 @@
           </div>
         </div>
         <div class="menu-cards menu-cards--premium">
-          <div class="menu-card">
+          <div class="menu-card" data-service="tuan-hoan-chi" role="button" tabindex="0" aria-label="Xem chi tiết: Cải thiện tuần hoàn chi – nhẹ chân">
             <div class="menu-card__icon">🦵</div>
             <div class="menu-card__name">Cải thiện tuần hoàn chi – nhẹ chân</div>
             <div class="menu-card__time">60 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-service="khop-hong" role="button" tabindex="0" aria-label="Xem chi tiết: Cân bằng khớp hông – từ gốc cột sống">
             <div class="menu-card__icon">🔄</div>
             <div class="menu-card__name">Cân bằng khớp hông – từ gốc cột sống</div>
             <div class="menu-card__time">90 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
-          <div class="menu-card">
+          <div class="menu-card" data-service="khop-goi" role="button" tabindex="0" aria-label="Xem chi tiết: Giải phóng dịch khớp gối">
             <div class="menu-card__icon">🦵</div>
             <div class="menu-card__name">Giải phóng dịch khớp gối – tăng linh hoạt</div>
             <div class="menu-card__time">60 phút</div>
+            <div class="menu-card__tap">Xem chi tiết →</div>
           </div>
         </div>
       </div>
@@ -884,6 +893,42 @@
     </div>
   </section>
 
+  <!-- ===== SERVICE DETAIL MODAL ===== -->
+  <div class="svc-overlay" id="svc-overlay" role="dialog" aria-modal="true" aria-label="Chi tiết dịch vụ">
+    <div class="svc-modal" id="svc-modal">
+      <button class="svc-close" id="svc-close" aria-label="Đóng">✕</button>
+
+      <!-- Left: visual -->
+      <div class="svc-visual">
+        <div class="svc-icon-big" id="svc-icon">🧖</div>
+        <div class="svc-visual-label" id="svc-category">Trải nghiệm nhẹ</div>
+      </div>
+
+      <!-- Right: info -->
+      <div class="svc-body">
+        <p class="svc-eyebrow" id="svc-eyebrow">Núi Đỏ Wellness</p>
+        <h2 class="svc-title" id="svc-title">Thư giãn cổ vai gáy</h2>
+
+        <div class="svc-meta-row">
+          <span class="svc-duration-badge" id="svc-duration">30 phút</span>
+          <span class="svc-price-badge" id="svc-price">350.000 ₫</span>
+        </div>
+
+        <p class="svc-desc" id="svc-desc">Mô tả dịch vụ.</p>
+
+        <ul class="svc-steps" id="svc-steps"></ul>
+
+        <ul class="svc-usps" id="svc-usps"></ul>
+
+        <div class="svc-actions">
+          <a href="https://wa.me/84866799439" target="_blank" rel="noopener" class="btn btn--whatsapp svc-btn">💬 Đặt qua WhatsApp</a>
+          <a href="https://zalo.me/0866799439" target="_blank" rel="noopener" class="btn btn--primary svc-btn">📱 Đặt qua Zalo</a>
+        </div>
+        <p class="svc-note">Có thể đặt trong ngày · Spa ngay trong tòa nhà</p>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="footer__grid">
 
@@ -965,6 +1010,489 @@
   </div>
 
   <script src="../js/main.js"></script>
+
+  <style>
+    /* ===== SERVICE DETAIL MODAL ===== */
+    .menu-card { cursor: pointer; }
+    .menu-card__tap {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.6rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .menu-card:hover .menu-card__tap { color: rgba(255,255,255,0.95); }
+
+    /* Overlay */
+    .svc-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(20,12,5,0.65);
+      backdrop-filter: blur(6px);
+      z-index: 5000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .svc-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Modal box */
+    .svc-modal {
+      background: var(--cream, #fdf6ec);
+      border-radius: 20px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      position: relative;
+      box-shadow: 0 32px 90px rgba(0,0,0,0.3);
+      transform: translateY(28px) scale(0.97);
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+      opacity: 0;
+    }
+    .svc-overlay.open .svc-modal {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    /* Left visual panel */
+    .svc-visual {
+      background: linear-gradient(160deg, #3b5e45 0%, #2a4232 100%);
+      border-radius: 20px 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      padding: 3rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .svc-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(212,169,106,0.18) 0%, transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.06) 0%, transparent 55%);
+    }
+    .svc-icon-big {
+      font-size: 4.5rem;
+      line-height: 1;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
+      position: relative;
+    }
+    .svc-visual-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(212,169,106,0.9);
+      text-align: center;
+      position: relative;
+    }
+
+    /* Right body */
+    .svc-body {
+      padding: 2.5rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .svc-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone, #9e855a);
+      margin: 0;
+    }
+    .svc-title {
+      font-family: var(--font-serif, serif);
+      font-size: 1.7rem;
+      line-height: 1.25;
+      color: var(--charcoal, #2c2416);
+      margin: 0;
+    }
+    .svc-meta-row {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .svc-duration-badge {
+      background: var(--sand, #e8d9c5);
+      color: var(--charcoal, #2c2416);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+    }
+    .svc-price-badge {
+      background: linear-gradient(135deg, #7c5c3e, #a07850);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      letter-spacing: 0.01em;
+    }
+    .svc-desc {
+      font-size: 0.95rem;
+      color: var(--mid-gray, #7a6e62);
+      line-height: 1.75;
+      margin: 0;
+    }
+    /* Steps list */
+    .svc-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .svc-steps li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.88rem;
+      color: var(--charcoal, #2c2416);
+      line-height: 1.55;
+    }
+    .svc-steps li::before {
+      content: attr(data-step);
+      background: var(--forest, #3b5e45);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 800;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    /* USPs */
+    .svc-usps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .svc-usps li {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      font-size: 0.84rem;
+      color: var(--mid-gray, #7a6e62);
+    }
+    .svc-usps li span.ic { font-size: 1rem; flex-shrink: 0; }
+    /* Actions */
+    .svc-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .svc-btn { font-size: 0.85rem; padding: 0.7rem 1.4rem; }
+    .svc-note {
+      font-size: 0.75rem;
+      color: var(--mid-gray, #7a6e62);
+      margin: 0;
+    }
+    /* Close button */
+    .svc-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(0,0,0,0.07);
+      border: none;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: background 0.2s;
+      color: var(--charcoal, #2c2416);
+    }
+    .svc-close:hover { background: rgba(0,0,0,0.15); }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .svc-modal {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        max-height: 92vh;
+      }
+      .svc-visual {
+        border-radius: 20px 20px 0 0;
+        padding: 2rem;
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: flex-start;
+      }
+      .svc-icon-big { font-size: 3rem; }
+      .svc-body { padding: 1.5rem 1.5rem 1.5rem; }
+      .svc-title { font-size: 1.35rem; }
+    }
+  </style>
+
+  <script>
+  (function() {
+    /* ===== Service data ===== */
+    var services = {
+      'co-vai-gay': {
+        icon: '🧖',
+        category: 'Trải nghiệm nhẹ',
+        title: 'Thư giãn cổ vai gáy',
+        duration: '30 phút',
+        price: '350.000 ₫',
+        desc: 'Liệu trình tập trung vào vùng cổ, vai và gáy — nơi tích tụ căng thẳng nhiều nhất sau một ngày làm việc. Kỹ thuật ấn huyệt nhẹ nhàng giúp giải phóng cơ bắp co cứng, cải thiện lưu thông máu và khôi phục sự nhanh nhẹn.',
+        steps: [
+          'Ngâm chân thảo dược làm ấm và thư giãn toàn thân',
+          'Ấn huyệt vùng cổ – làm mềm cơ và tăng tuần hoàn',
+          'Massage vùng vai và gáy bằng tinh dầu sả gừng',
+          'Kết thúc bằng khăn ấm đắp – để cơ thể thả lỏng hoàn toàn'
+        ],
+        usps: [
+          '⏱ Chỉ 30 phút – phù hợp giờ nghỉ trưa hoặc buổi tối',
+          '🌿 Sử dụng tinh dầu thiên nhiên an toàn',
+          '✅ Không cần cởi đồ – tiện lợi, nhanh gọn'
+        ]
+      },
+      'mat-mat': {
+        icon: '👁️',
+        category: 'Trải nghiệm nhẹ',
+        title: 'Thanh lọc mắt – giảm mỏi',
+        duration: '45 phút',
+        price: '420.000 ₫',
+        desc: 'Liệu trình chuyên biệt dành cho người làm việc nhiều với máy tính. Kết hợp massage mắt, ấn huyệt vùng thái dương và thư giãn vùng trán bằng đá thạch anh lạnh giúp giảm mỏi, khô và căng mắt hiệu quả.',
+        steps: [
+          'Đắp khăn ấm vùng trán và mắt để giãn cơ',
+          'Massage nhẹ vùng thái dương và quanh hốc mắt',
+          'Ấn huyệt điểm zanzhu – giảm mỏi mắt và đau đầu',
+          'Đặt đá thạch anh lạnh lên mắt – tái tạo và làm dịu'
+        ],
+        usps: [
+          '💻 Lý tưởng cho remote worker và freelancer',
+          '🔵 Đá thạch anh lạnh tự nhiên – không hóa chất',
+          '😴 Sau liệu trình cảm giác mắt nhẹ hơn rõ rệt'
+        ]
+      },
+      'nao-bo-ngu-sau': {
+        icon: '🧠',
+        category: 'Trải nghiệm nhẹ',
+        title: 'Dưỡng sinh não bộ – ngủ sâu',
+        duration: '60 phút',
+        price: '550.000 ₫',
+        desc: 'Liệu trình kết hợp massage đầu da và ấn huyệt theo liệu pháp Đông y giúp giải phóng căng thẳng thần kinh, giảm lo âu và kích thích giấc ngủ sâu tự nhiên. Rất phù hợp sau những ngày làm việc áp lực cao.',
+        steps: [
+          'Massage đầu da với dầu thực vật ấm – kích thích tuần hoàn não',
+          'Ấn huyệt Bách hội (đỉnh đầu) và các điểm huyệt vùng gáy',
+          'Thư giãn vùng tai và thái dương bằng kỹ thuật dưỡng sinh',
+          'Kết thúc bằng thiền âm thanh nhẹ – lắng đọng tinh thần'
+        ],
+        usps: [
+          '🌙 Cải thiện chất lượng giấc ngủ sau 1–2 buổi',
+          '🧘 Phù hợp với người bị stress, lo âu nhẹ',
+          '🌿 Không dùng thuốc – hoàn toàn tự nhiên'
+        ]
+      },
+      'dau-dau-tien-dinh': {
+        icon: '🌀',
+        category: 'Chăm sóc chuyên sâu',
+        title: 'Cân bằng đau đầu – tiền đình – giấc ngủ',
+        duration: '60 phút',
+        price: '650.000 ₫',
+        desc: 'Liệu trình được thiết kế để xử lý cùng lúc ba vấn đề thường đi kèm nhau: đau đầu mạn tính, rối loạn tiền đình và mất ngủ. Kỹ thuật ấn huyệt sâu vùng đầu và cổ giúp tái lập cân bằng thần kinh tự nhiên.',
+        steps: [
+          'Đánh giá tình trạng và xác định vùng cần can thiệp',
+          'Ấn huyệt chuyên sâu vùng đầu: bách hội, phong trì, ấn đường',
+          'Massage cổ và nền sọ – giải phóng căng thẳng thần kinh giao cảm',
+          'Thư giãn toàn bộ vai và lưng trên để hỗ trợ cột sống cổ'
+        ],
+        usps: [
+          '🌀 Giảm đau đầu rõ rệt sau 1–2 buổi đầu',
+          '⚖️ Hỗ trợ cải thiện triệu chứng tiền đình nhẹ',
+          '🏆 Được chọn nhiều nhất trong nhóm chuyên sâu'
+        ]
+      },
+      'cot-song-co-lung': {
+        icon: '🦴',
+        category: 'Chăm sóc chuyên sâu',
+        title: 'Hỗ trợ cột sống cổ/lưng – giải phóng chèn ép',
+        duration: '90 phút',
+        price: '890.000 ₫',
+        desc: 'Liệu trình toàn diện dành cho người bị đau lưng mạn tính, gù vai, hoặc cảm giác chèn ép dọc cột sống. Kỹ thuật deep-tissue massage kết hợp giải phóng điểm kích hoạt (trigger point) giúp phục hồi sự linh hoạt và giảm đau từ gốc.',
+        steps: [
+          'Thẩm định dáng đứng và vùng cột sống cần ưu tiên',
+          'Nhiệt liệu pháp đá nóng dọc cột sống – giãn cơ sâu',
+          'Deep-tissue massage toàn bộ lưng và cổ (40 phút)',
+          'Giải phóng trigger point vùng vai và cổ',
+          'Kỹ thuật kéo giãn nhẹ hỗ trợ tái tạo không gian đốt sống'
+        ],
+        usps: [
+          '🦴 Đặc biệt hiệu quả với người ngồi lâu làm việc',
+          '🔥 Đá nóng trị liệu tự nhiên – không thuốc',
+          '💪 90 phút chuyên sâu – kết quả bền lâu'
+        ]
+      },
+      'than-kinh-toa': {
+        icon: '⚡',
+        category: 'Chăm sóc chuyên sâu',
+        title: 'Hỗ trợ thần kinh tọa – giảm tê đau',
+        duration: '90 phút',
+        price: '890.000 ₫',
+        desc: 'Liệu trình tập trung vào đường dây thần kinh tọa — từ lưng dưới qua hông, đùi và xuống bắp chân. Massage chuyên sâu kết hợp ấn huyệt giúp giảm tê bì, đau nhói và cải thiện khả năng vận động của chân mà không cần dùng thuốc.',
+        steps: [
+          'Thẩm định mức độ và hướng tê đau của thần kinh tọa',
+          'Massage sâu vùng lưng dưới và hông (cơ piriformis)',
+          'Ấn huyệt dọc đường bàng quang kinh từ lưng xuống chân',
+          'Giải phóng cơ đùi sau và bắp chân – giảm tê bì ngọn chi',
+          'Hướng dẫn bài tập giãn cơ duy trì tại nhà'
+        ],
+        usps: [
+          '⚡ Giảm cảm giác tê chân sau 1–2 buổi đầu',
+          '🏃 Tăng khả năng đi lại và vận động hàng ngày',
+          '📋 Tư vấn bài tập kéo dài hiệu quả tại nhà'
+        ]
+      },
+      'tuan-hoan-chi': {
+        icon: '🦵',
+        category: 'Phục hồi xương khớp',
+        title: 'Cải thiện tuần hoàn chi – nhẹ chân',
+        duration: '60 phút',
+        price: '600.000 ₫',
+        desc: 'Liệu trình chuyên biệt cho người hay bị phù chân, nặng chân cuối ngày hoặc tê bì do ngồi lâu. Kết hợp massage bạch huyết nhẹ với ấn huyệt theo y học cổ truyền giúp kích thích lưu thông máu và giảm phù hiệu quả.',
+        steps: [
+          'Ngâm chân muối sả và gừng – kích thích tuần hoàn',
+          'Massage bạch huyết nhẹ từ bàn chân lên đùi',
+          'Ấn huyệt lòng bàn chân theo phản xạ học',
+          'Nâng cao chân kết hợp nhiệt ấm – đẩy dịch phù'
+        ],
+        usps: [
+          '🦵 Giảm phù và nặng chân ngay sau buổi đầu',
+          '🩸 Kích thích tuần hoàn tự nhiên không dùng thuốc',
+          '🛌 Lý tưởng để dùng buổi tối trước khi ngủ'
+        ]
+      },
+      'khop-hong': {
+        icon: '🔄',
+        category: 'Phục hồi xương khớp',
+        title: 'Cân bằng khớp hông – từ gốc cột sống',
+        duration: '90 phút',
+        price: '950.000 ₫',
+        desc: 'Liệu trình dài và toàn diện dành cho người bị đau hông, đau lưng dưới hoặc cảm giác mất thăng bằng vùng xương chậu. Tập trung điều chỉnh sự cân bằng cơ – khớp từ cột sống thắt lưng xuống vùng hông và đùi.',
+        steps: [
+          'Đánh giá tư thế và sự bất đối xứng vùng xương chậu',
+          'Massage sâu cơ lưng dưới, cơ chậu hông và cơ đáy chậu',
+          'Ấn huyệt vùng thắt lưng – giải phóng chèn ép rễ thần kinh',
+          'Kéo giãn thụ động khớp hông và cột sống thắt lưng',
+          'Nằm nghỉ với tư thế phục hồi có hỗ trợ 10 phút'
+        ],
+        usps: [
+          '🔄 Giảm đau hông và cải thiện dáng đi rõ rệt',
+          '🏋️ Phù hợp người thể thao và làm việc văn phòng',
+          '🌿 Kết hợp đông y và vật lý trị liệu hiện đại'
+        ]
+      },
+      'khop-goi': {
+        icon: '🦵',
+        category: 'Phục hồi xương khớp',
+        title: 'Giải phóng dịch khớp gối – tăng linh hoạt',
+        duration: '60 phút',
+        price: '650.000 ₫',
+        desc: 'Liệu trình dành cho người bị cứng khớp, lạo xạo khớp gối hoặc đau âm ỉ vùng đầu gối. Kỹ thuật massage quanh khớp kết hợp vận động thụ động giúp kích thích tiết dịch khớp tự nhiên và phục hồi biên độ chuyển động.',
+        steps: [
+          'Nhiệt ấm quanh khớp gối – chuẩn bị mô mềm',
+          'Massage quanh xương bánh chè và các gân bám',
+          'Vận động thụ động – gập duỗi và xoay nhẹ khớp gối',
+          'Ấn huyệt dương lăng tuyền – hỗ trợ gân và dây chằng',
+          'Đá lạnh kết thúc – giảm viêm và củng cố khớp'
+        ],
+        usps: [
+          '🦵 Phổ biến với người tập gym, chạy bộ và yoga',
+          '❄️ Kết hợp nhiệt – lạnh theo liệu pháp phục hồi hiện đại',
+          '🔁 Cải thiện rõ rệt biên độ khớp sau 2–3 buổi'
+        ]
+      }
+    };
+
+    var overlay = document.getElementById('svc-overlay');
+    var modal   = document.getElementById('svc-modal');
+    var closeBtn= document.getElementById('svc-close');
+
+    function openService(key) {
+      var d = services[key];
+      if (!d) return;
+      document.getElementById('svc-icon').textContent      = d.icon;
+      document.getElementById('svc-category').textContent  = d.category;
+      document.getElementById('svc-eyebrow').textContent   = 'Núi Đỏ Wellness · ' + d.category;
+      document.getElementById('svc-title').textContent     = d.title;
+      document.getElementById('svc-duration').textContent  = d.duration;
+      document.getElementById('svc-price').textContent     = d.price;
+      document.getElementById('svc-desc').textContent      = d.desc;
+
+      // Steps
+      var stepsEl = document.getElementById('svc-steps');
+      stepsEl.innerHTML = '';
+      d.steps.forEach(function(s, i) {
+        var li = document.createElement('li');
+        li.setAttribute('data-step', i + 1);
+        li.textContent = s;
+        stepsEl.appendChild(li);
+      });
+
+      // USPs
+      var uspsEl = document.getElementById('svc-usps');
+      uspsEl.innerHTML = '';
+      d.usps.forEach(function(u) {
+        var li = document.createElement('li');
+        li.innerHTML = '<span class="ic">' + u.slice(0,2) + '</span><span>' + u.slice(2).trim() + '</span>';
+        uspsEl.appendChild(li);
+      });
+
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Bind menu cards
+    document.querySelectorAll('.menu-card[data-service]').forEach(function(card) {
+      card.addEventListener('click', function() { openService(card.dataset.service); });
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openService(card.dataset.service); }
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+  })();
+  </script>
 
 
 </body>
