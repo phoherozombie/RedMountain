@@ -51,6 +51,38 @@
       Dù bạn ở từ vài tuần đến vài tháng, việc chăm sóc cơ thể rất quan trọng. Dịch vụ massge tại đây giúp bạn thư giãn, giảm căn cơ, phục hồi năng lượng — không cần di chuyển nhiều, không cần đặt lịch phức tạp.
       </p>
 
+      <div class="hero__badges">
+        <div class="hero__badge">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21C12 21 4 14 4 9a8 8 0 0116 0c0 5-8 12-8 12z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
+          <span class="hero__badge-text">Giảm căng cơ<br>&amp; mệt mỏi</span>
+        </div>
+
+        <div class="hero__badge">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3c-1.5 3-4 5-4 8a4 4 0 008 0c0-3-2.5-5-4-8z"/>
+              <path d="M8.5 17.5C7 19 5.5 20 5 21h14c-.5-1-2-2-3.5-3.5"/>
+            </svg>
+          </div>
+          <span class="hero__badge-text">Thư giãn<br>sâu</span>
+        </div>
+
+        <div class="hero__badge">
+          <div class="hero__badge-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="8"/>
+              <polyline points="12,7 12,12 15,15"/>
+            </svg>
+          </div>
+          <span class="hero__badge-text">Linh hoạt<br>&amp; tiện lợi</span>
+        </div>
+      </div>
+
       <div class="hero__ctas">
         <a href="contact.html" class="btn btn--primary">
           Đặt lịch massage
@@ -338,6 +370,74 @@ Dịch vụ massage tại chỗ hỗ trợ giảm đau, thư giãn cơ và cải
   </section>
 
   <style>
+    /* ===== HERO BADGES ===== */
+    .hero__badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 0 0 36px;
+      flex-wrap: wrap;
+    }
+
+    .hero__badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 28px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .hero__badge + .hero__badge {
+      border-left: 1px solid rgba(210, 175, 110, 0.35);
+    }
+
+    .hero__badge-icon {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid rgba(210, 175, 110, 0.60);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero__badge-icon svg {
+      width: 17px;
+      height: 17px;
+      stroke: rgba(210, 175, 110, 0.85);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hero__badge-text {
+      text-align: left;
+      font-size: 12.5px;
+      line-height: 1.4;
+      color: rgba(235, 220, 190, 0.88);
+      font-style: italic;
+    }
+
+    @media (max-width: 640px) {
+      .hero__badges {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin: 0 auto 32px;
+        width: fit-content;
+      }
+      .hero__badge {
+        padding: 0;
+      }
+      .hero__badge + .hero__badge {
+        border-left: none;
+      }
+    }
+
     /* ===== MENU STYLES ===== */
     .menu-category {
       margin-bottom: 2.5rem;
