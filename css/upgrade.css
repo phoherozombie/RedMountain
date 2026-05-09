@@ -1294,3 +1294,30 @@
     object-fit: cover;
     display: block;
 }
+
+/* ── Dark Feature Cards ── */
+.feature-card--dark {
+  background: #472d1d; /* Deep luxury brown */
+  color: var(--white);
+  border-bottom: 3px solid var(--terracotta);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card--dark:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+  background: #3a2518; /* Slightly darker on hover */
+}
+
+.feature-card--dark h3 {
+  color: var(--white);
+}
+
+.feature-card--dark p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.feature-card--dark .feature-card__icon {
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.3));
+}
