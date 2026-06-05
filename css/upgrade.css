@@ -176,21 +176,41 @@
   color: white;
 }
 
+.sticky-fb {
+  background: #1877F2;
+}
+
 @media (max-width: 768px) {
   .mobile-cta-bar {
-    display: flex;
+    display: none !important;
   }
 
-  /* Push footer content up so bar doesn't cover it */
+  /* Push footer content up slightly so the floating icons don't cover text */
   .footer {
-    padding-bottom: 6rem;
+    padding-bottom: 4rem !important;
   }
 
   .sticky-cta {
-    display: none;
+    display: flex !important;
+    bottom: 1.5rem !important;
+    right: 1.2rem !important;
+    gap: 0.6rem !important;
   }
 
-  /* Hide desktop sticky on mobile */
+  .sticky-cta a {
+    width: 46px !important;
+    height: 46px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 1.2rem !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .sticky-cta a:hover {
+    transform: scale(1.08) !important;
+  }
 }
 
 /* ── Scroll-Triggered Inline CTA Block ── */

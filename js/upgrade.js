@@ -29,8 +29,8 @@ function trackEvent(eventName, params = {}) {
 // ── Dynamic WhatsApp Deep Links ─────────────────────
 // Messages are tailored per page for higher conversion
 const WA_NUMBER = '8486699439'; // Replace with real number
-const ZALO_NUMBER = '0000000000'; // Replace with real number
-const FB_PAGE = 'https://m.me/YourFBPageName'; // Replace with real Facebook page
+const ZALO_NUMBER = '086699439'; // Replace with real number
+const FB_PAGE = 'https://www.facebook.com/profile.php?id=61582163267317'; // Replace with real Facebook page
 
 const WA_MESSAGES = {
   'index.html': "Hi! I'm interested in staying at Red Mountain. Can you tell me more about long-stay availability?",
@@ -2575,19 +2575,12 @@ function injectQuickChat() {
 
 // ── Inject Facebook into existing sticky CTA ───────
 function upgradeStickyCTA() {
-  const stickyCTA = document.querySelector('.sticky-cta');
-  if (!stickyCTA) return;
+  const fbLink = document.querySelector('.sticky-fb');
+  if (!fbLink) return;
 
-  // Add Facebook messenger link
-  const fbLink = document.createElement('a');
-  fbLink.href = FB_PAGE;
-  fbLink.target = '_blank';
-  fbLink.rel = 'noopener';
-  fbLink.className = 'sticky-fb';
-  fbLink.style.cssText = 'background:#1877F2;color:white;display:flex;align-items:center;gap:0.6rem;padding:0.75rem 1.2rem;border-radius:50px;font-size:0.85rem;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.3s ease;';
-  fbLink.innerHTML = '👤 <span class="label">Facebook</span>';
-  fbLink.addEventListener('click', () => trackEvent('facebook_click'));
-  stickyCTA.appendChild(fbLink);
+  fbLink.addEventListener('click', () => {
+    trackEvent('facebook_click', { page: window.location.pathname });
+  });
 }
 
 // ── Helpers ─────────────────────────────────────────
